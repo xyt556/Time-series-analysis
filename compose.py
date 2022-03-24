@@ -6,14 +6,14 @@
 import PIL.Image as Image
 import os
 
-IMAGES_PATH = 'C:/Users/xyt556/PycharmProjects/Time-series-analysis/'  # 图片集地址
+IMAGES_PATH = './Eigenvectors/'  # 图片集地址
 IMAGES_FORMAT = ['.jpg', '.JPG']  # 图片格式
 
-IMAGE_ROW = 4  # 图片间隔，也就是合并成一张图后，一共有几行
-IMAGE_COLUMN = 2  # 图片间隔，也就是合并成一张图后，一共有几列
+IMAGE_ROW = 2  # 图片间隔，也就是合并成一张图后，一共有几行
+IMAGE_COLUMN = 4  # 图片间隔，也就是合并成一张图后，一共有几列
 IMAGE_SIZE_w = 3840  # 每张小图片的大小,单个图像的横向像素数
 IMAGE_SIZE_h = 2880  # 每张小图片的大小,单个图像的纵向像素数
-IMAGE_SAVE_PATH = r'.\compose.jpg'  # 图片转换后的地址
+IMAGE_SAVE_PATH = r'.\compose1.jpg'  # 图片转换后的地址
 
 # 获取图片集地址下的所有图片名称
 image_names = [name for name in os.listdir(IMAGES_PATH) for item in IMAGES_FORMAT if

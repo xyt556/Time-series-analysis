@@ -8,10 +8,11 @@ df = pd.read_excel('PCA_result.xlsx', sheet_name= 'data')
 # data = df[0:4] #前四行
 #  修改参数，选取不同年份，每4行一年
 data = df.iloc[28:32,3:] # 指定行列号筛选
+year = 2020
 print("读取指定行的数据：\n{0}".format(data))
 Eigenvectors = np.array(data)
 print(Eigenvectors)
-year = 2020
+
 #定义热力图数据
 PC = ["PC1", "PC2", "PC3", "PC4"]
 #主成分
@@ -147,7 +148,7 @@ fig, ax = plt.subplots()
 #将元组分解为fig和ax两个变量
 
 im, cbar = heatmap(Eigenvectors, PC, factors, ax=ax,
-                   cmap="YlGn", cbarlabel="Eigenvectors" +'-' + str(year))
+                   cmap="YlGn", cbarlabel="Eigenvectors")
 """
     从一个Eigenvectorspy数组和两个标签列表创建一个热图。
 
@@ -191,6 +192,7 @@ texts = annotate_heatmap(im, valfmt="{x:.4f} ")
 '''
 
 fig.tight_layout()  #自动调整子图参数,使之填充整个图像区域。
-jpgfile = str(year) + '_' + '.jpg'
+plt.text(4.2,-0.7,str(year))
+jpgfile = str(year) + '_Eigenvectors' + '.jpg'
 plt.savefig(jpgfile, dpi=600)
 plt.show()      #图像展示
