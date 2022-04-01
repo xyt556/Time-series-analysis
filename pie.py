@@ -8,7 +8,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 # workpath = r'D:\Pan_CUMT\CloudSpace\personal_space\study\RESI\fig'
-df = pd.read_excel(r"D:\Pan_CUMT\CloudSpace\personal_space\study\RESI\PCA_result.xlsx", sheet_name= '1985_2001')
+df = pd.read_excel(r"D:\Pan_CUMT\CloudSpace\personal_space\study\RESI\PCA_result.xlsx", sheet_name= 'RSEI')
 print(df)
 
 print('---------')

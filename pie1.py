@@ -29,8 +29,8 @@ for i in range(1,9):
         # 定义颜色
         colors = ['#A50026', '#F88E52', '#FFFFBF', '#86CB66', '#006837']
         fig1, ax1 = plt.subplots()
-        ax1.pie(data, explode=explode, colors =colors, labels=labels, autopct='%1.2f%%',
-                shadow=False, startangle=90)
+        ax1.pie(data, explode=explode, colors =colors, labels=labels, autopct='%1.1f%%',
+                shadow=False, startangle=0, pctdistance=0.6,wedgeprops={'edgecolor': 'silver', 'linewidth': 1,}) #, rotatelabels = True
         ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
         fig1.tight_layout()  #自动调整子图参数,使之填充整个图像区域。

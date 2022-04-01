@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 # workpath = r'D:\Pan_CUMT\CloudSpace\personal_space\study\RESI\fig'
 df = pd.read_excel(r"D:\Pan_CUMT\CloudSpace\personal_space\study\RESI\PCA_result.xlsx",
-                   sheet_name= '1985_2020')
+                   sheet_name= '2001_2020')
 print(df)
 
 print('---------')
@@ -30,15 +30,15 @@ print(data)
 # 定义颜色
 colors = ['#A50026', '#F88E52', '#FFFFBF', '#86CB66', '#006837']
 fig1, ax1 = plt.subplots()
-ax1.pie(data,  colors =colors, labels=labels, autopct='%1.2f%%',
-        shadow=False, startangle=90, pctdistance=0.5)  # explode=explode,
+ax1.pie(data,  colors =colors, labels=labels, radius=1, autopct='%1.2f%%',
+        shadow=False, startangle=90, pctdistance=0.5, labeldistance= None)  # explode=explode,
 ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 # plt.figure(figsize=(40, 6.5))
 fig1.tight_layout()  #自动调整子图参数,使之填充整个图像区域。
-# plt.legend(loc="lower right", title="Answer", fancybox=False, ncol=1, shadow=True)
+plt.legend(loc="lower right", title="", fancybox=False, ncol=1, shadow=True)
 # plt.text(1,-1,'1985_2020')
 plt.title('1985_2020')
-jpgfile = 'pie' + '1985_2020' + '.jpg'
+jpgfile = 'pie' + '2001_2020' + '.jpg'
 print(jpgfile)
 plt.savefig(jpgfile, dpi=600)
 plt.show()

@@ -6,7 +6,7 @@
 import PIL.Image as Image
 import os
 
-IMAGES_PATH = './Eigenvectors/'  # 图片集地址
+IMAGES_PATH = './pie/'  # 图片集地址
 IMAGES_FORMAT = ['.jpg', '.JPG']  # 图片格式
 
 IMAGE_ROW = 2  # 图片间隔，也就是合并成一张图后，一共有几行
